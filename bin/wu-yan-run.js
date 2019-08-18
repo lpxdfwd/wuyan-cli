@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
 const chalk = require('chalk');
 const logSymbols = require('log-symbols');
+const {webpackConfigPath} = require('../static/config.static');
 
 function run() {
   const status = process.argv[2];
@@ -11,7 +13,11 @@ function run() {
   }
   const isBuild = status === 'build';
 
-  isBuild ? require('lpx-webpack-config/scripts/build') : require('lpx-webpack-config/scripts/start');
+  if (fs.existsSync(webpackConfigPath)) {
+    isBuild ? require(webpackConfigPath + '/scripts/build') : require(webpackConfigPath + '/scripts/start');
+  } else {
+    isBuild ? require('lpx-webpack-config/scripts/build') : require('lpx-webpack-config/scripts/start');
+  }
 }
 
 run();
