@@ -28,7 +28,7 @@ let promptList = [
     name: 'projectName',
     validate (val) {
       if (val !== '') {
-        consle.log('项目名称: ', chalk.red(val));
+        console.log('项目名称: ', chalk.red(val));
         return true
       }
       return '请输入项目名称'
