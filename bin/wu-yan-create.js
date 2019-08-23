@@ -1,3 +1,8 @@
+#!/usr/bin/env node
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const path = require('path');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
