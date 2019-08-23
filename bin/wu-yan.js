@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+process.on('unhandledRejection', err => {
+  throw err;
+});
 
 const program = require('commander');
 const pag = require('../package');

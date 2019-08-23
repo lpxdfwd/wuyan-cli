@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+process.on('unhandledRejection', err => {
+  throw err;
+});
 
 const fs = require('fs');
 const chalk = require('chalk');
