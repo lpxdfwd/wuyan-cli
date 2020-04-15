@@ -17,7 +17,7 @@ function run() {
   const isBuild = status === 'build';
 
   if (fs.existsSync(webpackConfigPath)) {
-    isBuild ? require(webpackConfigPath + '/scripts/src/build') : require(webpackConfigPath + '/scripts/src/start');
+    isBuild ? require(webpackConfigPath + '/src/scripts/build') : require(webpackConfigPath + '/src/scripts/start');
   } else {
     isBuild ? require('lpx-webpack-config/dist/scripts/build') : require('lpx-webpack-config/dist/scripts/start');
   }
