@@ -1,6 +1,6 @@
 {
   "name": "wuyan-cli",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "wuyan-cli",
   "keywords": [
     "cli",
@@ -21,7 +21,7 @@
     "download-git-repo": "^2.0.0",
     "inquirer": "^6.5.1",
     "log-symbols": "^3.0.0",
-    "lpx-webpack-config": "^1.2.3",
+    "lpx-webpack-config": "^1.x.x",
     "ora": "^3.2.0"
   }
 }
